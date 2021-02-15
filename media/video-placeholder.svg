@@ -1,0 +1,16 @@
+<svg version="1.1" viewBox="0 0 1706.7 960" xmlns="http://www.w3.org/2000/svg">
+ <rect x="-3.1974e-14" y="-4.4409e-14" width="1706.7" height="960" fill="#fff" stroke-linejoin="round" stroke-width="2.9062" style="paint-order:stroke fill markers"/>
+ <style type="text/css">.st0{fill:#28346A;}
+	.st1{fill:#FFFFFE;}
+	.st2{fill:#8B2434;}</style>
+ <g transform="matrix(5.5235 0 0 5.5235 577.93 181.61)" stroke-width=".05827">
+  <path d="m0 0h99.726v28.982h-25.395v79.062h-48.962v-78.934h-25.267z" fill="#fff" style="paint-order:stroke fill markers"/>
+  <g transform="translate(-79.458 .89816)">
+   <path d="m129.36 13.605v92.609h23.434v-92.609h-23.434" fill="#8c1e1c"/>
+   <path d="m105.81 13.605v92.609h23.543v-92.609h-23.543" fill="#d1d1d1"/>
+   <path d="m80.293 27.289h98.012v-27.289h-98.012v27.289" fill="#383335"/>
+   <path d="m130.7 10.562 7.3242-2.4531-4.5586 6.3477 4.5586 6.2734-7.3633-2.5312-4.5195 6.2773v-7.6367l-7.1641-2.4609 7.1055-2.3945 0.0586-7.6562 4.5586 6.2344" fill="#211e1e"/>
+   <path d="m126.14 4.3281-0.0586 7.6562-7.1055 2.3945 7.1641 2.4609v7.6367l4.5195-6.2773 7.3633 2.5312-4.5586-6.2734 4.5586-6.3477-7.3242 2.4531-4.5586-6.2344" fill="#d1d1d1"/>
+  </g>
+ </g>
+</svg>

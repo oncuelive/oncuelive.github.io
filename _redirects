@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+/session/* /session/:splat 200! Role=session,full
+/session/* /signin?req=/session/:splat 302!
+
+/staff-chat /staff-chat 200! Role=staff,full
+/staff-chat /signin?req=/staff-chat/ 302!
+
+/session-tv /session-tv 200! Role=admin
+/session-tv /signin?req=/session-tv/ 302!
+
+/hls-testing /hls-testing 200! Role=admin
+/hls-testing /signin?req=/hls-testing/ 302!

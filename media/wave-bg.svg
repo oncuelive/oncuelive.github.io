@@ -1,0 +1,9 @@
+<svg fill="none" stroke-linecap="square" stroke-miterlimit="10" version="1.1" viewBox="0 0 1280.3 720" xmlns="http://www.w3.org/2000/svg">
+ <clipPath>
+  <path d="m0 0h1280v720h-1280z"/>
+ </clipPath>
+ <g transform="translate(-646.19 -673.41)" stroke-linejoin="round" stroke-width="3">
+  <rect x="646.19" y="673.41" width="1280.3" height="720" fill="#013088" style="paint-order:stroke fill markers"/>
+  <path d="m646.19 1393.4 0.23884-286.83c364.89 257.43 857.15-406.91 1280.1-143.72v430.55z" fill="#063897" style="paint-order:stroke fill markers"/>
+ </g>
+</svg>

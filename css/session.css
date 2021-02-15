@@ -1,0 +1,43 @@
+.session-page {
+  grid-template-rows: auto auto auto 1fr;
+}
+
+.session-page header {
+  align-items: center;
+  background-color: var(--color-primary-dark);
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  justify-content: center;
+  padding: 1rem;
+
+  --m-top: 0;
+}
+
+[data-multi-session="true"].session-page header {
+  background-color: var(--color-primary);
+  position: relative;
+}
+
+.session-page header .client-logo {
+  max-width: 4rem;
+}
+
+.session-titlebox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  line-height: 1.3;
+}
+
+.session-titlebox h1 {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.session-titlebox .session-times {
+  font-size: 1em;
+}

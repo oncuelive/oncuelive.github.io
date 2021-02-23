@@ -1,9 +1,4 @@
-.session-page {
-  grid-template-rows: auto auto auto 1fr;
-}
-
 .session-page header {
-  align-items: center;
   background-color: var(--color-primary-dark);
   color: white;
   display: flex;
@@ -13,11 +8,6 @@
   padding: 1rem;
 
   --m-top: 0;
-}
-
-[data-multi-session="true"].session-page header {
-  background-color: var(--color-primary);
-  position: relative;
 }
 
 .session-page header .client-logo {

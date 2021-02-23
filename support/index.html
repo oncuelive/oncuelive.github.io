@@ -1257,6 +1257,7 @@ summary::-webkit-details-marker {
   min-width: 12.3em;
   padding: 1em 0.75em;
   text-transform: uppercase;
+  width: 100%;
 }
 
 [data-start]:not(body) a {
@@ -1292,14 +1293,15 @@ summary::-webkit-details-marker {
   width: 100%;
 }
 
-.session-button:is(.early, .late):hover::before {
+.session-button.early:hover::before,
+.session-button.late:hover::before {
   opacity: 1;
   transform: translate3d(0, 0, 0);
   transition: opacity 0.2s, transform 0.3s;
 }
 
 .session-button.early::before {
-  content: "This starts later today";
+  content: "Opens 20min early";
 }
 
 .session-button.late::before {
@@ -1352,6 +1354,7 @@ a.siema {
 .sponsors .siema {
   grid-column: 1 / -1;
   grid-row: 1;
+  max-width: 860px;
   width: 100%;
 }
 
@@ -1550,6 +1553,28 @@ footer a:hover .icon {
   [data-multi-session="true"] header {
     position: relative;
   }
+
+  .schedule .time {
+    top: 0;
+  }
+
+  .schedule-session {
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-session > * {
+    grid-column: 1 / -1;
+    grid-row: unset;
+  }
+
+  .schedule summary {
+    position: static;
+  }
+
+  .session-button a {
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1643,8 +1668,24 @@ footer a:hover .icon {
   background-position: center !important;
   background-repeat: no-repeat!important;
   background-size: contain!important;
-}</style></head><body class="help-page" data-multi-session="true" data-notifications="[{&quot;time&quot;:1613577300000,&quot;msg&quot;:&quot;Another session is coming up after this one!&quot;,&quot;type&quot;:&quot;session&quot;},{&quot;time&quot;:1613580900000,&quot;msg&quot;:&quot;Another session is coming up after this one!&quot;,&quot;type&quot;:&quot;session&quot;},{&quot;time&quot;:1613584800000,&quot;msg&quot;:&quot;Another session is coming up after this one!&quot;,&quot;type&quot;:&quot;session&quot;},{&quot;time&quot;:1613589300000,&quot;msg&quot;:&quot;Another session is coming up after this one!&quot;,&quot;type&quot;:&quot;session&quot;},{&quot;time&quot;:1613590800000,&quot;msg&quot;:&quot;Another session is coming up after this one!&quot;,&quot;type&quot;:&quot;session&quot;}]"><header><div class="ie-note" hidden><p>This website will not work on Internet Explorer. Please use the latest version of Microsoft Edge or Google Chrome.</p></div><nav class="main-nav"><ul class="horiz-list un-list"><li><a href="/">Home</a></li><li><a href="/schedule">Schedule</a></li><li><a href="https://tasboengage2021.sched.com/">Plan Ahead</a></li><li><a href="https://s23.a2zinc.net/clients/tasbo/tasbo2021/Public/Content.aspx?ID=228&sortMenu=107000" target="_blank" rel="noreferrer">Marketplace</a></li><li><a href="https://www.tasbo.org/exhibit-sponsor-advertise/meet-our-partners">Sponsors</a></li><li><a href="https://tasboengage2021.sched.com/directory/speakers">Speakers</a></li><li><a href="/support">Support</a></li></ul></nav></header><main id="main"><noscript>I'm sorry, but Javascript is required for this site. Please enable it.</noscript><article id="troubleshooting" class="troubleshooting toggle custom-scroller" hidden><h2>Troubleshooting / Viewing Tips</h2><ol><li>Video quality will suffer if you're <strong>connected to a VPN</strong>.</li><li><strong>Give the video a minute to load</strong>, especially on older devices.</li><li>Try <strong>refreshing the session page if experiencing issues.</strong>.</li><li>This site works best using the latest version of <strong><a href="https://www.google.com/chrome" target="_blank" rel="noreferrer">Google Chrome</a> or <a href="https://www.microsoft.com/en-us/edge" target="_blank" rel="noreferrer">Microsoft Edge</a></strong>.</li><li>Make sure <strong>cookies are enabled</strong>.</li><li>Make sure any <strong>privacy extensions</strong> are disabled for this site.</li></ol><h2>Support Chat</h2><p>Support chat does not work in <strong>private browsing mode</strong>, if a <strong>privacy browser extension is enabled</strong>, or if <strong>cookies are disabled</strong>. The Safari browser may have cookies disabled by default. Please try using Chrome or Edge.</p><button id="openSupport" class="openLiveSupportiChat">Open support chat</button><script type="text/javascript">(function() {
+}
+
+.issues {
+  background-color: #ffb85e;
+  font-weight: 700;
+  padding: 1rem;
+  text-align: center;
+}
+
+.un-list {
+  list-style: initial;
+}
+
+.un-list li::marker {
+  color: transparent!important;
+  font-size: 0rem;
+}</style></head><body class="help-page" data-multi-session="true" data-notifications="[]"><header><div class="ie-note" hidden><p>This website will not work on Internet Explorer. Please use the latest version of Microsoft Edge or Google Chrome.</p></div><nav class="main-nav"><ul class="horiz-list un-list"><li><a href="/">Home</a></li><li><a href="/schedule">Schedule</a></li><li><a href="https://tasboengage2021.sched.com/">Plan Ahead</a></li><li><a href="https://s23.a2zinc.net/clients/tasbo/tasbo2021/Public/Content.aspx?ID=228&sortMenu=107000" target="_blank" rel="noreferrer" data-matomo-cat="TASBO" data-matomo-action="Marketplace click" data-matomo-name="Nav Marketplace">Marketplace</a></li><li><a href="https://www.tasbo.org/exhibit-sponsor-advertise/meet-our-partners" data-matomo-cat="Sponsor" data-matomo-action="Sponsors link click" data-matomo-name="Nav Sponsors">Sponsors</a></li><li><a href="https://tasboengage2021.sched.com/directory/speakers" data-matomo-cat="TASBO" data-matomo-action="Speakers link click" data-matomo-name="Nav Speakers">Speakers</a></li><li><a href="/support">Support</a></li></ul></nav></header><main id="main"><noscript>I'm sorry, but Javascript is required for this site. Please enable it.</noscript><article id="troubleshooting" class="troubleshooting toggle custom-scroller" hidden><h2>Troubleshooting / Viewing Tips</h2><ol><li>Video quality will suffer if you're <strong>connected to a VPN</strong>.</li><li><strong>Give the video a minute to load</strong>, especially on older devices.</li><li>Try <strong>refreshing the session page if experiencing issues.</strong>.</li><li>This site works best using the latest version of <strong><a href="https://www.google.com/chrome" target="_blank" rel="noreferrer">Google Chrome</a> or <a href="https://www.microsoft.com/en-us/edge" target="_blank" rel="noreferrer">Microsoft Edge</a></strong>.</li><li>Make sure <strong>cookies are enabled</strong>.</li><li>Make sure any <strong>privacy extensions</strong> are disabled for this site.</li></ol><h2>Support Chat</h2><p>Support chat does not work in <strong>private browsing mode</strong>, if a <strong>privacy browser extension is enabled</strong>, or if <strong>cookies are disabled</strong>. The Safari browser may have cookies disabled by default. Please try using Chrome or Edge.</p><button id="openSupport" class="openLiveSupportiChat">Open support chat</button><script type="text/javascript">(function() {
     var s = document.createElement('script');s.type='text/javascript';s.defer=true;s.id='lsInitScript';
     s.src='https://livesupporti.com/Scripts/clientAsync.js?acc=f9780ea8-cf17-42ae-8799-663696e9a864&skin=Modern';
     var scr=document.getElementsByTagName('script')[0];scr.parentNode.appendChild(s, scr);
-    })();</script></article></main><footer><a class="logo" href="https://www.tasbo.org/" target="_blank" rel="noreferrer"><img class="" width="" height="" src="//images.ctfassets.net/zus5puxdavse/Lrh9Txcb2pVaGFcAXE6kS/b14e3cc198086b6ef3f37e3ba318e2a0/logo-tasbo-blacktext.svg" alt="" decoding="async"></a><h2 class="sr">Contact Information</h2><div class="contact-1"><h3>Texas Association of School Business Officials</h3><ul class="un-list"><li>Phone: <a href="tel:5124621711">512.462.1711</a></li><li>Fax: <a href="tel:5124621782">512.462.1782</a></li></ul></div><div class="contact-2"><h3>Headquarters</h3><address><p>5920 W. William Cannon Dr.<br>Bldg 1, Ste 200<br>Austin, TX 78749</p></address></div><a class="contact-link" href="https://www.tasbo.org/contact" target="_blank" rel="noreferrer">Contact Us</a><ul class="social-list un-list"><li><a href="https://twitter.com/tasbo"><div class="twitter icon"></div><span class="sr">Twitter</span></a></li><li><a href="https://www.facebook.com/tasboupdate/"><div class="facebook icon"></div><span class="sr">Facebook</span></a></li><li><a href="https://www.linkedin.com/company/texas-association-of-school-business-officials"><div class="linkedin icon"></div><span class="sr">LinkedIn</span></a></li></ul></footer><aside id="notifications" class="notifications"></aside><script src="/js/siema.min.js" defer="defer"></script><script src="/js/main.js?v1613415392243" defer="defer"></script></body></html>
+    })();</script></article></main><footer><a class="logo" href="https://www.tasbo.org/" target="_blank" rel="noreferrer"><img class="" width="" height="" src="//images.ctfassets.net/zus5puxdavse/Lrh9Txcb2pVaGFcAXE6kS/b14e3cc198086b6ef3f37e3ba318e2a0/logo-tasbo-blacktext.svg" alt="" decoding="async"></a><h2 class="sr">Contact Information</h2><div class="contact-1"><h3>Texas Association of School Business Officials</h3><ul class="un-list"><li>Phone: <a href="tel:5124621711">512.462.1711</a></li><li>Fax: <a href="tel:5124621782">512.462.1782</a></li></ul></div><div class="contact-2"><h3>Headquarters</h3><address><p>5920 W. William Cannon Dr.<br>Bldg 1, Ste 200<br>Austin, TX 78749</p></address></div><a class="contact-link" href="https://www.tasbo.org/contact" target="_blank" rel="noreferrer">Contact Us</a><ul class="social-list un-list"><li><a href="https://twitter.com/tasbo"><div class="twitter icon"></div><span class="sr">Twitter</span></a></li><li><a href="https://www.facebook.com/tasboupdate/"><div class="facebook icon"></div><span class="sr">Facebook</span></a></li><li><a href="https://www.linkedin.com/company/texas-association-of-school-business-officials"><div class="linkedin icon"></div><span class="sr">LinkedIn</span></a></li></ul></footer><aside id="notifications" class="notifications"></aside><script src="/js/siema.min.js" defer="defer"></script><script src="/js/main.js?v1614049044563" defer="defer"></script></body></html>

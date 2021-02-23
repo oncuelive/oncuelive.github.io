@@ -9,7 +9,6 @@
   --shade: rgba(0, 0, 0, 0.2);
   --shade-light: rgba(0, 0, 0, 0.1);
   --tint: rgba(255, 255, 255, 0.2);
-  --tint-heavy: rgba(255, 255, 255, 0.6);
   --shadow:
     0 0 5px var(--shade),
     0 0 15px var(--shade-light);
@@ -33,18 +32,17 @@ a:-webkit-any-link:focus {
 body {
   color: var(--black);
   display: grid;
-  font-family: var(--font-sans);
+  font-family: 'Montserrat', sans-serif;
   font-size: 130%;
   grid-template-rows: min-content;
   margin: 0;
 
   --m-top: 1rem;
-  --bg-color: white;
+  --bg-color:var(--white);
 }
 
 header {
   background-color: var(--bg-color);
-  font-family: var(--font-sans);
   position: relative;
 }
 
@@ -54,19 +52,13 @@ main {
   z-index: 1;
 }
 
-main,
-header,
-nav {
-  background-image: var(--texture);
-}
-
 main > * {
   margin-top: 0;
 }
 
 footer {
   align-items: center;
-  background-color: var(--color-primary);
+  background-color: #013088;
   bottom: 0;
   color: var(--white);
   display: flex;
@@ -74,8 +66,8 @@ footer {
   justify-content: center;
   margin: 0;
   padding: 2rem;
-  /* -webkit-position: sticky;
-  position: sticky; */
+  -webkit-position: sticky;
+  position: sticky;
   text-align: center;
 }
 
@@ -90,7 +82,6 @@ main > article {
 }
 
 nav {
-  font-family: var(--font-sans);
   width: 100%;
 }
 
@@ -113,13 +104,11 @@ h3 {
   margin-top: 1em;
 }
 
-h1, h2, h3, h4, .heading {
-  font-family: var(--font-sans);
+h1, h2, h3 {
   line-height: 1;
 }
 
 p {
-  font-family: var(--font-serif);
   margin-left: auto;
   margin-right: auto;
   max-width: 70ch;
@@ -171,7 +160,7 @@ noscript {
 }
 
 .un-list {
-  list-style: url(data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=);
+  list-style: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==);
   padding: 0;
 }
 
@@ -192,9 +181,8 @@ button,
   border-radius: 3px;
   cursor: pointer;
   display: block;
-  font-family: var(--font-sans);
   line-height: 1;
-  padding: 0.5em 0.75em;
+  padding: 0.75em;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -219,7 +207,6 @@ button:hover,
 .buttony:hover {
   background-color: var(--black);
   border-color: transparent;
-  color: white;
 }
 
 button.btn-secondary:hover,
@@ -232,7 +219,6 @@ button:not(.no-animate):active,
   transform: scale(0.98);
 }
 
-button.unbutton,
 button.linky {
   background-color: transparent;
   border: none;
@@ -340,7 +326,6 @@ button[data-toggle-target-id][aria-expanded="true"] {
   max-width: min(80vw, 400px);
 }
 
-.event-header,
 .event-intro {
   display: grid;
   gap: 2rem;
@@ -348,21 +333,20 @@ button[data-toggle-target-id][aria-expanded="true"] {
   padding: 5rem 5%;
 }
 
-[data-multi-session="true"] .event-intro {
-  padding-bottom: 8rem;
-  padding-top: 8rem;
-}
-
 .event-intro h1,
 .event-intro h2 {
+  color: white;
   font-size: 2rem;
 }
 
-.event-header .logo {
-  width: min(90vw, 900px);
+.event-intro em {
+  display: block;
+  margin-top: 1rem;
+  opacity: 0.8;
 }
 
 .event-intro p {
+  color: var(--white);
   padding: 0 2vw;
 }
 
@@ -422,6 +406,18 @@ input {
   background-color: var(--white);
   padding: 1.75rem 1.5rem 0.5rem;
   width: 100%;
+}
+
+input[type="radio"] {
+  width: auto;
+}
+
+fieldset {
+
+}
+
+legend {
+
 }
 
 label.select {
@@ -604,6 +600,7 @@ button .spinner {
 
   --m-top: 2rem;
 }
+
 .troubleshooting:not([hidden]),
 .help-page .troubleshooting {
   display: grid;
@@ -624,18 +621,27 @@ button .spinner {
 }
 
 .openLiveSupportiChat {
-  background-color: var(--tint);
-  border: var(--border-med);
-  border-color: rgb(0 0 0 / 65%);
-  color: black;
+  background-color: var(--color-accent);
+  border: none;
+  color: var(--white);
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
+.help .openLiveSupportiChat {
+  background-color: var(--tint);
+  border: var(--border-med);
+  border-color: rgb(0 0 0 / 65%);
+  color: black;
+}
+
 .openLiveSupportiChat:hover {
   background-color: black;
-  color: white;
+}
+
+.help .openLiveSupportiChat:hover {
+  background-color: white;
 }
 
 .support-footnote {
@@ -677,12 +683,6 @@ button .spinner {
 
 .post-register ol {
   padding-left: 1.5rem;
-}
-
-/* 404 */
-.four-oh-four-page .event-header .logo {
-  margin-bottom: 4rem;
-  max-width: 400px;
 }
 
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {

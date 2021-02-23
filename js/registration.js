@@ -7,10 +7,10 @@
     e.preventDefault();
 
     const form = e.target;
-    const isVetted = document.querySelector("#gate").dataset.status === "preVet";
+    // const isVetted = document.querySelector("#gate").dataset.status === "preVet";
 
     let data = {
-      isVetted,
+      // isVetted,
       registrationData: {},
       eventName: form.dataset.eventName,
       eventDates: form.dataset.eventDates,
@@ -39,7 +39,7 @@
     .then(r => r.json())
     .catch(err => { console.log("ERRRR", err)});
 
-    if (res && res.sheetsGo) {
+    if (res && res.fsGo) {
 
       // Do other stuff if confirmGo/contactGo is false?
 
@@ -48,7 +48,7 @@
       // Store reg data for display on confirmation page
       if (window.sessionStorage) sessionStorage.setItem("AHA_REG_DATA", JSON.stringify(data.registrationData));
 
-      if (isVetted) window.location.href = "/confirmed";
+      if (res.isPreapproved) window.location.href = "/confirmed";
       else window.location.href = "/thank-you";
 
     } else {
@@ -66,4 +66,21 @@
     }
 
   });
+
+  // const workRadio = document.querySelector("#workRadio");
+  // const conditionalInputs = document.querySelectorAll("[data-condition] input");
+
+  // if (workRadio) document.querySelectorAll(".work-radio input").forEach(radio => radio.addEventListener("click", e => {
+  //   const el = e.target;
+
+  //   workRadio.dataset.value = el.value;
+
+  //   disableInputs(conditionalInputs);
+
+  //   Array.from(conditionalInputs).filter(input => input.parentNode.dataset.condition === el.value).forEach(input => input.removeAttribute("disabled"));
+  // }));
+
+  // function disableInputs(inputs = []) {
+  //   inputs.forEach(input => input.disabled = true);
+  // }
 }

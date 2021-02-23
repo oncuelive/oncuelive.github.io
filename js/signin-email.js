@@ -1,9 +1,7 @@
 "use strict";
 {
   const urlParams = new URLSearchParams(window.location.search);
-  const toPage = urlParams.get('req');
-  const attemptedType = toPage.split("/")[1];
-
+  const toPage = urlParams.get('session');
   let fails = 0;
 
   document.querySelector("#signin").addEventListener("submit", async e => {
@@ -12,8 +10,7 @@
     const form = e.target;
     const data = {
       eventName: form.dataset.eventName,
-      submittedEmail: form.email.value,
-      attemptedType
+      submittedEmail: form.email.value
     };
 
     let res;
@@ -34,15 +31,11 @@
       console.log(err);
     });
 
-    if (res && res.isAttendee && res.correctPath) {
-      if (_paq) _paq.push(['setUserId', data.submittedEmail]);
-      if (localStorage) localStorage.setItem("matomoID", data.submittedEmail);
+    if (res && res.isAttendee) {
+     if (_paq) _paq.push(['setUserId', data.submittedEmail]);
+     if (localStorage) localStorage.setItem("matotmoID", data.submittedEmail);
 
-      window.location.href = `${toPage}`;
-
-    } else if (res && res.isAttendee) {
-
-      form.dataset.status = "wrong-role";
+      window.location.href = `/session/${toPage}`;
 
     } else if (res && res.isAttendee === false) {
 
@@ -53,16 +46,6 @@
       if (fails > 0) {
 
         form.dataset.status = "fail";
-
-        fetch("https://hooks.slack.com/services/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", {
-          method: "POST",
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            text: `${data.submittedEmail} is trying to sign in, but there's been a problem.`
-          })
-        });
 
       } else {
 

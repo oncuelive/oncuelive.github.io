@@ -1,5 +1,9 @@
 "use strict";
 {
+  /** Check if day-of */
+  const day = new Date(document.body.dataset.startDate);
+  document.body.dataset.isToday = day < Date.now() ? true : false;
+
   function loadToggle(e) {
     const btn = e.target;
 

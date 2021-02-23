@@ -89,7 +89,6 @@ form:not([data-status="sending"]) button .spinner {
   font-weight: 700;
 }
 
-[data-status="wrong-role"] .wrong-role-notice,
 [data-status="rejected"] .reject-notice,
 [data-status="retry"] .retry-notice,
 [data-status="fail"] .fail-notice {

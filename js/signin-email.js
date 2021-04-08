@@ -32,10 +32,8 @@
     });
 
     if (res && res.isAttendee) {
-     if (_paq) _paq.push(['setUserId', data.submittedEmail]);
-     if (localStorage) localStorage.setItem("matotmoID", data.submittedEmail);
 
-      window.location.href = `/session/${toPage}`;
+      window.location.href = toPage && toPage.includes("hls-testing")? "/hls-testing" : `/session/${toPage}`;
 
     } else if (res && res.isAttendee === false) {
 

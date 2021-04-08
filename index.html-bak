@@ -741,108 +741,6 @@ button .spinner {
 
 
     
-      
-.gate {
-  padding: 5rem 5vw;
-  text-align: center;
-}
-
-.gate > * {
-  margin: auto;
-  max-width: 40ch;
-}
-
-.gate h2 {
-  color: var(--white);
-}
-
-.gate h3 {
-  color: var(--color-primary-light);
-  font-size: 1.5rem;
-  margin-top: 1em;
-}
-
-.gate .note {
-  color: white;
-  font-style: italic;
-  margin: 1rem auto;
-  text-align: center;
-}
-
-.gate[data-status="checkEmail"] #register,
-.gate:not([data-status="checkEmail"]) #checkEmail,
-.pre-vet,
-.no-vet {
-  display: none;
-}
-
-.pre-vet,
-.no-vet {
-  background: var(--color-primary-light);
-  display: grid;
-  grid-gap: 1rem;
-  line-height: 1.2;
-  padding: 2rem;
-  text-align: center;
-}
-
-.gate:not([data-status="preVet"]) .pre-vet,
-.gate:not([data-status="noVet"]) .no-vet {
-  display: none;
-}
-
-.register label,
-.register button {
-  width: 100%;
-}
-
-.register button {
-  margin-top: 2rem;
-}
-
-form:not([data-status="sending"]) button .spinner {
-  display: none;
-}
-
-.gate[data-status="preVet"] input:valid {
-  background-color: #d7ffd7;
-}
-
-.post-register {
-  color: var(--white);
-  margin: auto;
-  max-width: 60ch;
-  padding: 5rem;
-}
-
-.post-register * {
-  text-align: left;
-}
-
-.post-register > * + * {
-  margin-top: 2rem;
-}
-
-.post-register:not(.has-storage) .has-storage {
-  display: none;
-}
-
-.post-register [data-field] {
-  color: var(--color-primary-light);
-  font-weight: 700;
-}
-
-[data-status="rejected"] .reject-notice,
-[data-status="retry"] .retry-notice,
-[data-status="fail"] .fail-notice {
-  display: block;
-}
-
-form .notice {
-  background-color: var(--color-primary-light);
-  padding: 1em;
-}
-    
 
     
 
@@ -996,4 +894,4 @@ textarea {
     overflow: hidden;
     text-align: left;
   }
-}</style></head><body data-multi-session="false"><header><div class="ie-note" hidden><p>This website will not work on Internet Explorer. Please use the latest version of <a href="https://www.microsoft.com/en-us/edge">Microsoft Edge</a> or <a href="https://www.google.com/chrome/">Google Chrome</a>.</p></div><a href="/"><img width="414" height="144" class="client-logo logo" src="/media/aha-full-logo.svg" alt="American Hospital Association logo"></a></header><main id="main"><noscript>I'm sorry, but Javascript is required for this site. Please enable it.</noscript><section id="gate" class="gate"><form id="signin" class="signin" autocomplete="on"><label><input type="password" name="password" placeholder=" " required> <span class="label-text">Password</span></label><p class="sr"><label>Don’t fill this out if you're human: <input name="lamp" autocomplete="off" tabindex="-1"></label></p><button type="submit" class="btn-primary"><div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>Sign In</button></form></section><script src="/js/signin-pass.js" defer="defer"></script></main><footer><a href="https://www.aha.org/" target="_blank" rel="noreferrer"><img src="/media/aha-events-white.svg" alt="American Hospital Association logo" loading="lazy"></a></footer><script src="/js/main.js" defer="defer"></script></body></html>
+}</style></head><body data-multi-session="false"><header><div class="ie-note" hidden><p>This website will not work on Internet Explorer. Please use the latest version of <a href="https://www.microsoft.com/en-us/edge">Microsoft Edge</a> or <a href="https://www.google.com/chrome/">Google Chrome</a>.</p></div><a href="/"><img width="414" height="144" class="client-logo logo" src="/media/aha-full-logo.svg" alt="American Hospital Association logo"></a></header><main id="main"><noscript>I'm sorry, but Javascript is required for this site. Please enable it.</noscript><section class="event-intro"><h1>AHA All Team Meeting</h1><p class="intro-deets">April 8, 2021<br>12:30-2:30 p.m. ET</p><p><em>Participation in this event is by express written invitation from the AHA. Unauthorized participants and/or any party that aids and abets such unauthorized participants may be subject to criminal and civil penalties under both state and federal law.</em></p></section></main><footer><a href="https://www.aha.org/" target="_blank" rel="noreferrer"><img src="/media/aha-events-white.svg" alt="American Hospital Association logo" loading="lazy"></a></footer><script src="/js/main.js" defer="defer"></script></body></html>

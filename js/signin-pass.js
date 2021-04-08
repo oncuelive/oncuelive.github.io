@@ -1,7 +1,7 @@
 "use strict";
 {
   const urlParams = new URLSearchParams(window.location.search);
-  const toPage = urlParams.get('from');
+  const toPage = urlParams.get('path') || "/";
 
   document.querySelector("#signin").addEventListener("submit", async e => {
     e.preventDefault();
@@ -24,7 +24,9 @@
     .catch(err => { console.log("ERRRR", err)});
 
     if (res.isValid) {
-      window.location.href = `/session/${toPage}`;
+
+      window.location.href = toPage;
+
     } else {
       form.dataset.status = "invalid";
       alert("I'm sorry, that password is incorrect.");

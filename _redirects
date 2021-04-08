@@ -1,6 +1,16 @@
 
+/session/all-staff-meeting /session/all-team-meeting
 
 /register / 302!
+/session/* / 302!
 
 /session/* 200! Role=attendee
-/session/* /signin?session=:splat 302!
+/session/* /signin?path=/session/:splat 302!
+
+/hls-testing/* 200! Role=attendee
+/hls-testing/ /signin?path=/hls-testing 302!
+
+/presenter-chat /presenters-chat
+
+
+

@@ -63,21 +63,20 @@ footer {
 
 .qa::after {
   background-color: #28346a;
-  display: block;
+  color: rgb(255 255 255 / 75%);
+  content: "Q&A";
+  display: grid;
+  font-weight: 700;
   height: 3rem;
   left: 0.5em;
+  place-content: center;
   position: absolute;
-  top: 0;
-  width: 3rem;
-}
-
-.qa-loaded .qa::after {
-  content: "";
+  top: 0.2em;
+  width: 95%;
 }
 
 .event-intro h1 {
   margin-bottom: 1rem;
-  max-width: 40ch;
   text-align: center;
 }
 
@@ -134,10 +133,6 @@ textarea {
   color: black;
   flex-grow: 1;
   margin: 0;
-}
-
-.theoplayer-skin {
-  background: white url(/media/video-placeholder.svg) no-repeat center/contain;
 }
 
 @media (max-width: 750px) {

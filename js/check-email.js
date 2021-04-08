@@ -36,7 +36,7 @@
 
     } else {
 
-      fields.EMAIL.value = sanitizeString(data.email);
+      fields.Email.value = sanitizeString(data.email);
 
       gate.dataset.status = "noVet";
     }

@@ -12,48 +12,38 @@
 
   const element = document.querySelector(".theoplayer-container");
   const source = element.dataset.video;
+  let player = new THEOplayer.Player(element, {
+    libraryLocation: "https://cdn.myth.theoplayer.com/3163acf8-0c05-4d9d-966f-f3927f5bb90e"
+  });
+  customizeContextMenu(element);
 
-  function initTHEOOO() {
-    // if (document.body.dataset.start && !document.body.classList.contains("open")) {
-    //   setTimeout(initTHEOOO, 1000);
-    //   return false;
-    // }
+  const Button = THEOplayer.videojs.getComponent("Button");
+  const ccButton = THEOplayer.videojs.extend(Button, {
+    constructor: function() {
+      Button.apply(this, arguments);
 
-    let player = new THEOplayer.Player(element, {
-      libraryLocation: "https://cdn.myth.theoplayer.com/3163acf8-0c05-4d9d-966f-f3927f5bb90e"
-    });
-    customizeContextMenu(element);
+      this.el().dataset.toggleTargetId = "cc-info";
+    },
+    handleClick: function() {
+    },
+    buildCSSClass: function() {
+      return "vjs-button cc";
+    }
+  });
+  THEOplayer.videojs.registerComponent("ccButton", ccButton);
+  player.ui.getChild("controlBar").addChild("ccButton", {});
 
-    // const Button = THEOplayer.videojs.getComponent("Button");
-    // const ccButton = THEOplayer.videojs.extend(Button, {
-    //   constructor: function() {
-    //     Button.apply(this, arguments);
+  // OPTIONAL CONFIGURATION
+  // Customized video player parameters
+  player.source = {
+    sources: [{
+      "src": source,
+      "type": "application/x-mpegurl",
+      "lowLatency": false
+    }]
 
-    //     this.el().dataset.toggleTargetId = "cc-info";
-    //   },
-    //   handleClick: function() {
-    //   },
-    //   buildCSSClass: function() {
-    //     return "vjs-button cc";
-    //   }
-    // });
-    // THEOplayer.videojs.registerComponent("ccButton", ccButton);
-    // player.ui.getChild("controlBar").addChild("ccButton", {});
+  };
 
-    // OPTIONAL CONFIGURATION
-    // Customized video player parameters
-    player.source = {
-      sources: [{
-        "src": source,
-        "type": "application/x-mpegurl",
-        "lowLatency": false
-      }]
-
-    };
-
-    player.autoplay = true;
-    player.preload = 'auto';
-  }
-  initTHEOOO();
-
+  player.autoplay = true;
+  player.preload = 'auto';
 }

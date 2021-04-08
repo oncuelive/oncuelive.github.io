@@ -7,10 +7,10 @@
     e.preventDefault();
 
     const form = e.target;
-    // const isVetted = document.querySelector("#gate").dataset.status === "preVet";
+    const isMember = document.querySelector("#gate").dataset.status === "preVet";
 
     let data = {
-      // isVetted,
+      isMember,
       registrationData: {},
       eventName: form.dataset.eventName,
       eventDates: form.dataset.eventDates,

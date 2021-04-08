@@ -2,7 +2,6 @@
 /session/all-staff-meeting /session/all-team-meeting
 
 /register / 302!
-/session/* / 302!
 
 /session/* 200! Role=attendee
 /session/* /signin?path=/session/:splat 302!

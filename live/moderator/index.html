@@ -1,0 +1,55 @@
+<style>body {
+  background-color: black;
+  display: grid;
+  font-family: sans-serif;
+  grid-gap: 1px;
+  margin: 0;
+}
+
+.sy {
+  background-color: #ffb500;
+  color: black;
+  grid-column: 1 / -1;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.sy:hover {
+  background-color: #ffda80;
+}
+
+.frame,
+iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.frame {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 50vh;
+  position: relative;
+}
+
+.frame h2 {
+  margin: 0;
+  background: blue;
+  padding: 0.5em;
+}
+
+.frame:last-child h2 {
+  background: #af00ff;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  body {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto calc(100vh - 3.2rem);
+  }
+}</style><a class="sy" href="https://go.oncue.studio/aonl-may26" target="_blank" rel="noreferrer" title="RIGHT CLICK ME">To open the Streamyard for this session, <strong>right-click (or Ctrl + click) me</strong> and choose <strong>"Open in new window"</strong>.</a><div class="frame"><h2>Attendee Chat</h2><iframe class="chat" src="https://deadsimplechat.com/kbFHyCHWs" frameborder="0"></iframe></div><div class="frame"><h2>Attendee Q&A</h2><div style="color: white; text-align: center; padding: 2rem;">Q&A Disabled</div></div>

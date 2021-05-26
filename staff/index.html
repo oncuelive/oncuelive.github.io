@@ -1,0 +1,165 @@
+<style>body {
+  background-color: black;
+  display: grid;
+  font-family: sans-serif;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: min-content auto 270px;
+  margin: 0;
+  min-height: 100%;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: 1 / -1;
+}
+
+header > * {
+  flex-grow: 1;
+}
+
+button,
+.buttony {
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: grid;
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding: 0.5em;
+  place-content: center;
+  position: relative;
+  z-index: 0;
+}
+
+.buttony {
+  background-color: #3b673a;
+  color: white;
+  text-decoration: none;
+}
+
+button[data-toggle-target-id] {
+  color: white;
+}
+
+[class*="-info"]::before {
+  content: attr(data-pre);
+}
+
+button[aria-expanded="true"]::before {
+  background-color: #1d1d1d99;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+button.this {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  color: white !important;
+}
+
+iframe {
+  border: 4px solid transparent;
+}
+
+.breakout-admin {
+  align-items: stretch;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  grid-template-columns: 30ch 1fr;
+  justify-items: stretch;
+  min-height: 450px;
+  max-height: 66vh;
+}
+
+.breakouts-btn,
+.breakout-admin {
+  background-color: #3c6c62;
+}
+
+.breakout-admin:not([hidden]),
+.chat-frame:not([hidden]) {
+  display: grid;
+}
+
+.breakout-admin[hidden] ~ section {
+	grid-row: span 2;
+}
+
+.breakout-frame {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+[hidden] + .staff-chat {
+  grid-column: 1 / -1;
+}
+
+.breakout-controls {
+  align-content: start;
+  display: grid;
+  gap: 2px;
+  margin: 2px;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.breakout-controls::after {
+  content: "";
+  display: block;
+  height: 2rem;
+}
+
+iframe,
+.breakout-controls button {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.breakout-controls .leave-breakout-btn {
+  background: #721e1e;
+  color: white;
+}
+
+.chat-frame {
+  grid-template-rows: auto 1fr;
+  position: relative;
+  place-items: stretch;
+}
+
+.chat-frame h2 {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0.5em;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+
+.staff-chat-btn,
+.staff-chat {
+  background-color: #003088;
+}
+
+.attendee-chat-btn,
+.attendee-chat {
+  background-color: #75570a;
+}
+
+h1.no-sess {
+  color: white;
+}</style><title>Staff Room | Virtual AONL Advocacy Day</title><body><header><button class="attendee-chat-btn" data-toggle-target-id="attendeeChat" aria-expanded="false">Toggle Attendee Chat</button> <button class="breakouts-btn" data-toggle-target-id="breakouts" aria-expanded="false">Toggle Breakout Admin</button> <a class="buttony" href="https://go.oncue.studio/aonl-may26" target="_blank" rel="noreferrer">Open 5/26 Streamyard Room</a></header><section id="breakouts" class="breakout-admin toggle" hidden><div class="breakout-controls"><button class="leave-breakout-btn" data-url="">Leave Breakout</button> <button data-url="https://oncue.whereby.com/730bfaf3-b031-4b21-81c0-e69231d4a270?embed">A - BROO</button> <button data-url="https://oncue.whereby.com/d43abdf9-8d62-4dbc-8d8c-e321fd104e66?embed">BROW - CAT</button> <button data-url="https://oncue.whereby.com/5bf97317-2673-4b0f-ad39-87c70d17d7d2?embed">CAU - CRI</button> <button data-url="https://oncue.whereby.com/a4862b7d-c962-452c-b4a1-8c995b185bcc?embed">CUN - DET</button> <button data-url="https://oncue.whereby.com/51d377a1-104f-4340-8927-e2b241f1753d?embed">DEY - EMB</button> <button data-url="https://oncue.whereby.com/84e82ab1-cf40-4dd8-a6fc-77fcd2a26633?embed">END - GAS</button> <button data-url="https://oncue.whereby.com/d62c2363-c1b0-4dd7-8950-e4f980146adb?embed">GHI - HAC</button> <button data-url="https://oncue.whereby.com/2575de24-0800-420d-a84b-9911d43fc4fc?embed">HAF - HOE</button> <button data-url="https://oncue.whereby.com/722533a0-abc0-4a9f-8ec4-3783739e1193?embed">HUD - JON</button> <button data-url="https://oncue.whereby.com/d030cd15-e91b-4d6b-b949-e6815143bd3f?embed">JOS - LAG</button> <button data-url="https://oncue.whereby.com/7eb4fbee-e7f0-4f9b-b5d4-0cc4e06b5713?embed">LEG - MAL</button> <button data-url="https://oncue.whereby.com/028d8e79-6143-4ff2-9233-444b0c3e74cc?embed">MAR - MCD</button> <button data-url="https://oncue.whereby.com/c2fc8375-da71-4b43-ada2-a5b8e75eca7c?embed">MCE - MOR</button> <button data-url="https://oncue.whereby.com/4c58d3a3-9371-45e0-bda4-a1a6378c0d84?embed">MOY - OST</button> <button data-url="https://oncue.whereby.com/224a82bf-8987-439f-9ce5-6cb753a0697b?embed">OSU - RIC</button> <button data-url="https://oncue.whereby.com/67113d7d-506b-4a41-a691-fd3c979791a3?embed">ROB - SCH</button> <button data-url="https://oncue.whereby.com/b880994d-5e3a-4528-9759-7374454ef3ee?embed">SEM - STU</button> <button data-url="https://oncue.whereby.com/b39a7ddf-ec4a-42ea-b394-91475a4351b0?embed">SUM - TUR</button> <button data-url="https://oncue.whereby.com/0237bd1c-e2f6-4cf1-8845-beb9fa51984a?embed">V - Z</button></div><iframe class="breakout-frame" src="" allow="camera; microphone; fullscreen; speaker; display-capture" frameborder="0"></iframe></section><section id="attendeeChat" class="attendee-chat chat-frame toggle" hidden><h2>Attendee Chat</h2><iframe src="https://deadsimplechat.com/kbFHyCHWs"></iframe></section><section class="staff-chat chat-frame"><h2>Staff Chat (Comms)</h2><iframe src="https://deadsimplechat.com/aaWOWmpgF"></iframe></section><script src="/js/main.js?"></script><script>let frame = document.querySelector("iframe");
+
+    function setFrameSrc(url) {
+      frame.src = url;
+    }
+
+    document.querySelectorAll(".breakout-controls button").forEach(btn => btn.addEventListener("click", e => {
+      document.querySelectorAll(".this").forEach(el => el.classList.remove("this"));
+      setFrameSrc(e.target.dataset.url);
+      e.target.classList.add("this");
+    }));</script></body>
